@@ -1,0 +1,2 @@
+-- pegar as chefias do gdactplano e atualizar no gdact
+update gdact.avaliado set tipo = 'Chefia Imediata' where avaliado.siape in ( select s.siape from gdactplano1819.servidor s where s.eh_chefia like 'sim' )
